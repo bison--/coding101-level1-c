@@ -15,7 +15,7 @@ void execLoadingBar() {
     for (int i = userNumberNormal; i <= 10; i++) {
         printf("[");
         printHashtag(i);
-        printChatAmount(10 - i, ' ');
+        printCharAmount(10 - i, ' ');
 
         if (i == 0) {
             printf("]  0%% \n");
@@ -24,4 +24,3 @@ void execLoadingBar() {
         }
     }
 }
-

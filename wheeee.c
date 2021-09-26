@@ -6,7 +6,6 @@
 #include "wheeee.h"
 #include "helper.h"
 
-
 void wheeee_one() {
     printf("Enter MAX: ");
     int userNumber = 0;

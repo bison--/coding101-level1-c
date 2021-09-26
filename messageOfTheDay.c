@@ -7,11 +7,6 @@
 #include "messageOfTheDay.h"
 #include "helper.h"
 
-void fillArrayWithValue(int *ar, int arrayLength, int value);
-int arrayHasValue(int *ar, int arrayLength, int needle);
-int getFreeRandomIndex(int *usedIndexes, int arrayLength);
-void arraySetValue(int *ar, int arrayLength, int value);
-
 void showMessageOfTheDay(int showOne) {
     const int messageAmount = 6;
     const char* messages[] = {

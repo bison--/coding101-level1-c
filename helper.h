@@ -7,7 +7,7 @@
 
 void printHashtag(int amount);
 void printConst2Dchar(const char **ar, int rows);
-void printChatAmount(int amount, char character);
+void printCharAmount(int amount, char character);
 void printRandoms(int lower, int upper, int count);
 int getRandomRange(int min, int max);
 void fillArrayWithValue(int *ar, int arrayLength, int value);

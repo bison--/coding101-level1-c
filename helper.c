@@ -12,7 +12,7 @@ void printHashtag(int amount) {
     }
 }
 
-void printChatAmount(int amount, char character) {
+void printCharAmount(int amount, char character) {
     for (int i = 0; i < amount; i++) {
         printf("%c", character);
     }
