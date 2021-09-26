@@ -38,7 +38,8 @@ int main() {
 
     int selected = 0;
     scanf_s("%d", &selected);
-    scanf_s("%c", &dummyBuffer); // something bug last enter is \r\n so we have to get rid of the \n in the buffer
+    // something bug last enter is \r\n (on windows, might break anywhere else!) so we have to get rid of the \n in the buffer
+    scanf_s("%c", &dummyBuffer);
 
     switch (selected) {
         case 0:
