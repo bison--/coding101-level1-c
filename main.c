@@ -6,8 +6,9 @@
 #include "loadingbar.h"
 #include "messageOfTheDay.h"
 #include "helper.h"
+#include "matrix.h"
 
-#define NUMBER_OF_OPTIONS 7
+#define NUMBER_OF_OPTIONS 8
 char dummyBuffer;
 
 int main() {
@@ -17,7 +18,7 @@ int main() {
     srand(time(NULL));
 
     printf("######################\n");
-    printf("# CODING 101 Level 1 #\n");
+    printf("# CODING 101 LEVEL 1 #\n");
     printf("######################\n\n");
     //printRandoms(0, 6, 5);
 
@@ -26,6 +27,7 @@ int main() {
         "2) wheeee 2",
         "3) loading bar",
         "4) message of the day",
+        "5) MATRIX",
         "",
         "0) exit",
         ""
@@ -54,6 +56,9 @@ int main() {
             break;
         case 4:
             showMessageOfTheDay(0);
+            break;
+        case 5:
+            drawMatrix();
             break;
         default:
             printf("Option '%d' is not available!", selected);
