@@ -4,12 +4,7 @@
 
 #include <stdio.h>
 #include "wheeee.h"
-
-void printHashtag(int amount) {
-    for (int i = 0; i < amount; i++) {
-        printf("#");
-    }
-}
+#include "helper.h"
 
 
 void wheeee_one() {
@@ -38,4 +33,3 @@ void wheeee_two() {
         printf("\n");
     }
 }
-
