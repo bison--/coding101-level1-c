@@ -9,7 +9,12 @@
 void wheeee_one() {
     printf("Enter MAX: ");
     int userNumber = 0;
+
+#ifdef __unix__
+    scanf("%d", &userNumber);
+#else
     scanf_s("%d", &userNumber);
+#endif
 
     for (int i = 0; i < userNumber; i++) {
         printHashtag(i + 1);
@@ -20,7 +25,12 @@ void wheeee_one() {
 void wheeee_two() {
     printf("Enter MAX: ");
     int userNumber = 0;
+
+#ifdef __unix__
+    scanf("%d", &userNumber);
+#else
     scanf_s("%d", &userNumber);
+#endif
 
     for (int i = 0; i < userNumber; i++) {
         printHashtag(i + 1);

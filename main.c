@@ -37,9 +37,14 @@ int main() {
     printf("Select: ");
 
     int selected = 0;
+#ifdef __unix__
+    scanf("%d", &selected);
+#else
     scanf_s("%d", &selected);
     // something bug last enter is \r\n (on windows, might break anywhere else!) so we have to get rid of the \n in the buffer
-    scanf_s("%c", &dummyBuffer);
+    scanf_s("%c", &dummyBuffer, 1);
+#endif
+
 
     switch (selected) {
         case 0:

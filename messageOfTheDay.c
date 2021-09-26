@@ -35,7 +35,11 @@ void showMessageOfTheDay(int showOne) {
         }
 
         printf("> For more press enter, to quit q\n");
-        scanf_s("%c", &userInput);
+#ifdef __unix__
+        scanf("%c", &userInput);
+#else
+        scanf_s("%c", &userInput, 1);
+#endif
 
         if (userInput == 'q') {
             keepRunning = 0;

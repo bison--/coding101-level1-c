@@ -12,6 +12,16 @@ void drawMatrix() {
     int cols;
     int randomAmount;
 
+#ifdef __unix__
+    printf("\nWidth: ");
+    scanf("%d", &cols);
+
+    printf("\nHeight: ");
+    scanf("%d", &rows);
+
+    printf("\nRandoms: ");
+    scanf("%d", &randomAmount);
+#else
     printf("\nWidth: ");
     scanf_s("%d", &cols);
 
@@ -20,6 +30,9 @@ void drawMatrix() {
 
     printf("\nRandoms: ");
     scanf_s("%d", &randomAmount);
+#endif
+
+
 
     int fieldsTotal = rows * cols;
     if (randomAmount > fieldsTotal) {

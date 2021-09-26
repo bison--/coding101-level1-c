@@ -9,7 +9,11 @@
 void execLoadingBar() {
     int userNumber = 0;
     printf("Enter State: ");
+#ifdef __unix__
+    scanf("%d", &userNumber);
+#else
     scanf_s("%d", &userNumber);
+#endif
     int userNumberNormal = userNumber / 10;
 
     for (int i = userNumberNormal; i <= 10; i++) {
