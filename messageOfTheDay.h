@@ -5,6 +5,6 @@
 #ifndef CODING101_MESSAGEOFTHEDAY_H
 #define CODING101_MESSAGEOFTHEDAY_H
 
-void showMessageOfTheDay();
+void showMessageOfTheDay(int showOne);
 
 #endif //CODING101_MESSAGEOFTHEDAY_H

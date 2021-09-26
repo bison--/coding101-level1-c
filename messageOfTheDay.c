@@ -12,7 +12,7 @@ int arrayHasValue(int *ar, int arrayLength, int needle);
 int getFreeRandomIndex(int *usedIndexes, int arrayLength);
 void arraySetValue(int *ar, int arrayLength, int value);
 
-void showMessageOfTheDay() {
+void showMessageOfTheDay(int showOne) {
     const int messageAmount = 6;
     const char* messages[] = {
         "No one is perfect - that’s why pencils have erasers.\n - Wolfgang Riebe",
@@ -29,13 +29,15 @@ void showMessageOfTheDay() {
     fillArrayWithValue(usedIndexes, messageAmount, -1);
 
     char userInput;
-    scanf_s("%c", &userInput); // something bug last enter is \r\n so we have to get rid of the \n in the buffer
 
     int keepRunning = 1;
     while (keepRunning) {
         int randomIndex = getFreeRandomIndex(usedIndexes, messageAmount);
 
         printf("%s\n", messages[randomIndex]);
+        if (showOne) {
+            return;
+        }
 
         printf("> For more press enter, to quit q\n");
         scanf_s("%c", &userInput);

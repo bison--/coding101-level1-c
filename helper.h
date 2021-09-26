@@ -6,6 +6,7 @@
 #define CODING101_HELPER_H
 
 void printHashtag(int amount);
+void printConst2Dchar(const char **ar, int rows);
 void printChatAmount(int amount, char character);
 void printRandoms(int lower, int upper, int count);
 int getRandomRange(int min, int max);

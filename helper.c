@@ -19,6 +19,13 @@ void printChatAmount(int amount, char character) {
     }
 }
 
+void printConst2Dchar(const char **ar, int rows) {
+    for (int i = 0; i < rows; i ++) {
+        printf("%s", ar[i]);
+        printf("\n");
+    }
+}
+
 // Generates and prints 'count' random
 // numbers in range [lower, upper].
 void printRandoms(int lower, int upper, int count) {

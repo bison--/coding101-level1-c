@@ -7,10 +7,8 @@
 #include "messageOfTheDay.h"
 #include "helper.h"
 
-#define NUMBER_OF_OPTIONS 4
-
-void print2Dchar(const char **, int rows);
-void printHashtag(int amount);
+#define NUMBER_OF_OPTIONS 7
+char dummyBuffer;
 
 int main() {
     // init random
@@ -25,16 +23,24 @@ int main() {
         "1) wheeee 1",
         "2) wheeee 2",
         "3) loading bar",
-        "4) message of the day"
+        "4) message of the day",
+        "",
+        "0) exit",
+        ""
     };
 
-    print2Dchar(options, NUMBER_OF_OPTIONS);
+    printConst2Dchar(options, NUMBER_OF_OPTIONS);
     printf("Select: ");
 
     int selected = 0;
     scanf_s("%d", &selected);
+    scanf_s("%c", &dummyBuffer); // something bug last enter is \r\n so we have to get rid of the \n in the buffer
 
     switch (selected) {
+        case 0:
+            showMessageOfTheDay(1);
+            printf("and have a nice day <3");
+            return 0;
         case 1:
             wheeee_one();
             break;
@@ -45,7 +51,7 @@ int main() {
             execLoadingBar();
             break;
         case 4:
-            showMessageOfTheDay();
+            showMessageOfTheDay(0);
             break;
         default:
             printf("Option '%d' is not available!", selected);
@@ -54,11 +60,3 @@ int main() {
 
     return 0;
 }
-
-void print2Dchar(const char **ar, int rows) {
-    for (int i = 0; i < rows; i ++) {
-        printf("%s", ar[i]);
-        printf("\n");
-    }
-}
-
