@@ -12,6 +12,8 @@ char dummyBuffer;
 
 int main() {
     // init random
+    // this is highly insecure but enough for this application
+    // use /dev/urandom or equivalent for good randomness
     srand(time(NULL));
 
     printf("######################\n");
